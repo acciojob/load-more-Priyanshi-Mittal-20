@@ -13,17 +13,17 @@ const Load = ({ items }) => {
   return (
     <div>
 
-      <ul>
-        {items.slice(0, visible).map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-
-      {visible < items.length && (
-        <button onClick={handleMore}>
-          Load More
-        </button>
+      {visible > 0 && (
+        <ul>
+          {items.slice(0, visible).map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       )}
+
+      <button onClick={handleMore}>
+        Load More
+      </button>
 
     </div>
   )
