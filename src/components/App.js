@@ -1,6 +1,7 @@
 
 import React from "react";
 import './../styles/App.css';
+import Load from "./Load";
 
 const items = [
   "Item 1",
@@ -38,7 +39,7 @@ const items = [
 const App = () => {
   return (
     <div>
-        {/* Do not remove the main div */}
+        <Load items={items}/>
     </div>
   )
 }
